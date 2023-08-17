@@ -45,8 +45,10 @@ class Ticket {
   int v;
   CustomerId customerId;
   MechanicId mechanicId;
+  VehicleData vehicleData;
 
   Ticket({
+    required this.vehicleData,
     //required this.currentLocation,
     //required this.trackingLocation,
     required this.id,
@@ -73,6 +75,7 @@ class Ticket {
 
   factory Ticket.fromJson(Map<String, dynamic> json) {
     return Ticket(
+      vehicleData: VehicleData.fromJson(json["vehicleData"]),
       //currentLocation: Location.fromJson(json["currentLocation"]),
       //trackingLocation: Location.fromJson(json["trackingLocation"]),
       id: json["_id"],
@@ -214,4 +217,25 @@ class GeneralDetails {
     );
   }
 
+}
+
+class VehicleData {
+  String vehicleModel;
+  String vehicleBrand;
+  String vehicleFuel;
+  String vehicleNo;
+
+  VehicleData({
+    required this.vehicleModel,
+    required this.vehicleBrand,
+    required this.vehicleFuel,
+    required this.vehicleNo,
+  });
+
+  factory VehicleData.fromJson(Map<String, dynamic> json) => VehicleData(
+    vehicleModel: json["vehicleModel"],
+    vehicleBrand: json["vehicleBrand"],
+    vehicleFuel: json["vehicleFuel"],
+    vehicleNo: json["vehicleNo"],
+  );
 }

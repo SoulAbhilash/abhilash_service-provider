@@ -147,17 +147,17 @@ class _RequestDetailsState extends ConsumerState<RequestDetails> {
                         ),
                         const SizedBox(height: 20,),
                         Text(
-                          'Vehicle Model:',style: GoogleFonts.vesperLibre(fontSize: 16,),
+                          'Vehicle Model: ${getUserDetails.ticket.vehicleData.vehicleModel}',style: GoogleFonts.vesperLibre(fontSize: 16,),
                         ),
                         Text(
-                          'Vehicle Number:',style: GoogleFonts.vesperLibre(fontSize: 16),
+                          'Vehicle Number: ${getUserDetails.ticket.vehicleData.vehicleNo}',style: GoogleFonts.vesperLibre(fontSize: 16),
                         ),
                         Text(
                           'Issue:',style: GoogleFonts.vesperLibre(fontSize: 16),
                         ),
                         const SizedBox(height: 20,),
                         Text(
-                          'Other Details:',style: GoogleFonts.vesperLibre(fontSize: 18,fontWeight: FontWeight.w700),
+                          'Other Details: VehicleBrand ${getUserDetails.ticket.vehicleData.vehicleBrand} & Fuel ${getUserDetails.ticket.vehicleData.vehicleFuel}',style: GoogleFonts.vesperLibre(fontSize: 18,fontWeight: FontWeight.w700),
                         ),
                         Text(
                           'Help Center Number: 9098630635',style: GoogleFonts.vesperLibre(fontSize: 16),
